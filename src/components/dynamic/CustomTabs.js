@@ -8,15 +8,15 @@ const CustomTabs = ({ tabs }) => {
         <div className="flex flex-wrap">
             <div className="w-full">
                 <ul
-                    className="flex mb-0 pt-3 pb-4 flex-row"
+                    className="flex mb-0 pt-3 pb-3 flex-row"
                 >
                     {tabs.map((tab, index) => {
                         return <li key={index}
                             className={
-                                "-mb-px mr-2 cursor-pointer last:mr-0 flex-auto text-center text-xs font-bold uppercase py-1 shadow-lg rounded block leading-normal " +
+                                "-mb-px mr-2 cursor-pointer last:mr-0 flex-auto text-center text-sm font-bold py-1 shadow-lg rounded block leading-normal " +
                                 (openTab === index
                                     ? "text-white bg-gray-800"
-                                    : "text-gray-500 bg-blueGray-600")
+                                    : "text-gray-400 bg-blueGray-600")
                             }
                             onClick={() => setOpenTab(index)}
                         >
@@ -25,14 +25,14 @@ const CustomTabs = ({ tabs }) => {
                     })}
                 </ul>
                 <div className="relative flex flex-col min-w-0 break-words bg-blueGray-600 w-full mb-6 shadow-lg rounded h-full">
-                    <div className="px-4 py-2 flex-auto">
+                    <div className="pb-2 flex-auto">
                         <div className="tab-content tab-space">
                             {tabs[openTab].content}
                         </div>
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
