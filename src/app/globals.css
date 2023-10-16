@@ -25,6 +25,25 @@ body {
   height: 100%;
 }
 
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #021126;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5c7e8f;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c7e8fa5;
+}
+
 @media screen and (max-width: 1023px) {
 
   .platform-side,

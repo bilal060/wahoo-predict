@@ -10,11 +10,12 @@ const DashboardDetails = (props) => {
   const digits = [1, 2, 5, 10, 15, 20, 30, 50, 90];
   const timeSecondss = [10, 15, 20, 25, 30, 35, 40, 50, 60];
   const [time, setTime] = useState(new Date());
-  const { setSecondss, setPrice } = props;
+  const { setSecondss, setPrice, setBetTime } = props;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
+      setBetTime ? setBetTime(new Date()) : "";
     }, 1);
 
     return () => clearInterval(interval);
@@ -48,14 +49,14 @@ const DashboardDetails = (props) => {
                 className="col-span-4 flex items-center justify-center cursor-pointer hover:bg-[#0f223b] rounded-sm"
               >
                 <p
-                  className={`${
+                  className={`w-full text-center ${
                     digit === amount
                       ? "text-white cursor-pointer text-sm mb-1"
                       : "text-gray-500 cursor-pointer text-sm mb-1"
                   }`}
                   onClick={() => {
                     setAmount(digit);
-                    setPrice(digit);
+                    setPrice?setPrice(digit):'';
                   }}
                 >
                   {`$${digit}`}
@@ -75,13 +76,13 @@ const DashboardDetails = (props) => {
                 className="col-span-4 flex items-center justify-center cursor-pointer hover:bg-[#0f223b] rounded-sm"
               >
                 <p
-                  className={`${
+                  className={`w-full text-center ${
                     second === seconds
                       ? "text-white cursor-pointer text-sm mb-1"
                       : " text-gray-500 cursor-pointer text-sm mb-1"
                   }`}
                   onClick={() => {
-                    setSecondss(second);
+                    setSecondss ? setSecondss(second) : "";
                     setSeconds(second);
                   }}
                 >

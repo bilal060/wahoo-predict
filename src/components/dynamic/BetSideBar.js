@@ -7,7 +7,7 @@ const BetSidebar = ({ showSidebar, setShowSidebar, direction, children }) => {
   return (
     <React.Fragment>
       <div
-        className={`p-3 sidebar-container absolute w-full overflow-y-auto h-[100vh] bg-[#1d3554] z-20  ${
+        className={`sidebar-container absolute w-full overflow-y-auto h-[100vh] bg-[#1d3554] z-20  ${
           direction === "ltr"
             ? showSidebar
               ? "enter-left"
@@ -19,7 +19,7 @@ const BetSidebar = ({ showSidebar, setShowSidebar, direction, children }) => {
         style={showSidebar ? { display: "block" } : { display: "none" }}
       >
         <div
-          className={`flex ${
+          className={`flex pl-3 pt-3 ${
             direction === "ltr" ? "justify-end" : "justify-start"
           }`}
         >
@@ -29,7 +29,7 @@ const BetSidebar = ({ showSidebar, setShowSidebar, direction, children }) => {
           />
         </div>
         <h1 className="text-white text-2xl text-center w-full">Trades</h1>
-        <div className="sm:w-[70%] md:w-[50%] lg:w-[30%] mx-auto ">
+        <div className="sm:w-[70%] md:w-[50%] lg:w-[30%] mx-auto h-[calc(100vh-92px)] overflow-auto scroll-smooth px-3 pb-3">
           {children}
         </div>
       </div>

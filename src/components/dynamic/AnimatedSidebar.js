@@ -12,7 +12,7 @@ const AnimatedSidebar = ({
   return (
     <React.Fragment>
       <div
-        className={`p-3 sidebar-container absolute w-full h-screen bg-[#041328] z-20  ${
+        className={`p-3 sidebar-container absolute w-full h-screen bg-[#041328] z-20 top-0  ${
           direction === "ltr"
             ? showSidebar
               ? "enter-left"

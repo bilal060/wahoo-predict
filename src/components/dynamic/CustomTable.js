@@ -38,7 +38,7 @@ const CustomTable = ({ thead, tbody }) => {
           {thead.map((th, index) => {
             return (
               <th key={index} className="pb-4 text-center">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 justify-center">
                   {th}
                   <Image
                     src={arrow}
