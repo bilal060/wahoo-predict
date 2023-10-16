@@ -6,7 +6,7 @@ const CustomTabs = ({ tabs }) => {
     const [openTab, setOpenTab] = useState(0);
     return (
         <div className="flex flex-wrap">
-            <div className="w-full">
+            <div className="w-full h-[calc(100vh-74px-48px)] overflow-auto scroll-smooth">
                 <ul
                     className="flex mb-0 pt-3 pb-3 flex-row"
                 >

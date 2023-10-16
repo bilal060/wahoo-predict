@@ -18,6 +18,7 @@ const Dashboard = () => {
   const [showBetSidebar, setShowBetSidebar] = useState(false);
   const [showPlatformSidebar, setShowPlatformSidebar] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [pair, setPair] = useState("");
 
   const addNewBet = (betType) => {
     const newBet = {
@@ -41,7 +42,7 @@ const Dashboard = () => {
         setShowSidebar={setShowPlatformSidebar}
         direction="ltr"
       >
-        <Platform />
+        <Platform setPair={setPair} pair={pair} />
       </AnimatedSidebar>
       {showDetails && (
         <AnimatedSidebar
@@ -69,16 +70,16 @@ const Dashboard = () => {
         </div>
         <div className="grid grid-cols-12 h-full">
           <div className="xl:col-span-2 col-span-3 sm:hidden lg:block w-full platform-side pl-5">
-            <Platform />
+            <Platform setPair={setPair} pair={pair} />
           </div>
           <div
             className={`pb-[40px] ${
               showBetColumn
                 ? "col-span-12 md:col-span-8 lg:col-span-4 xl:col-span-5"
                 : "col-span-12 lg:col-span-7 xl:col-span-8"
-            } flex items-center justify-center transition-all`}
+            } transition-all`}
           >
-            <DashboardChart onBet={addNewBet} />
+            <DashboardChart onBet={addNewBet} pair={pair} />
           </div>
           <div className="col-span-2 sm:hidden lg:block dashboard-details-side bg-[#041328] px-3 rounded-tl-[8px]">
             <DashboardDetails

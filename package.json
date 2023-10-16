@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cryptocurrency-icons": "^0.18.1",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
