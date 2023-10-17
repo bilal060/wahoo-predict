@@ -94,7 +94,7 @@ const DashboardDetails = (props) => {
         </div>
       </CustomCardPlainBorder>
       <CustomCardPlainBorder title="Time UTC-4">
-        <p className="text-lg text-center text-white">{formatTime(time)}</p>
+        {/* <p className="text-lg text-center text-white">{formatTime(time)}</p> */}
       </CustomCardPlainBorder>
     </React.Fragment>
   );

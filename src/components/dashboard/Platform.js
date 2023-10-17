@@ -17,6 +17,8 @@ import matic from "../../../node_modules/cryptocurrency-icons/svg/color/matic.sv
 import usdt from "../../../node_modules/cryptocurrency-icons/svg/color/usdt.svg";
 import doge from "../../../node_modules/cryptocurrency-icons/svg/color/doge.svg";
 import btc from "../../../node_modules/cryptocurrency-icons/svg/color/btc.svg";
+import generic from "../../../node_modules/cryptocurrency-icons/svg/color/generic.svg";
+
 
 const Platform = ({ setPair, pair }) => {
   const tabletheads = ["Status", "Pairs", "Payouts"];
